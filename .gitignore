@@ -1,0 +1,93 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv*/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- LaTeX build intermediates ---
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# --- Manuscript (private until acceptance) ---
+/paper3_admm_dmpc*.tex
+/paper3_admm_dmpc*.docx
+/paper3_admm_dmpc*.pdf
+/paper3_admm_dmpc*.aux
+/paper3_admm_dmpc*.bbl
+/paper3_admm_dmpc*.blg
+/paper3_admm_dmpc*.out
+/paper3_admm_dmpc*.log
+/paper3_admm_dmpc*.fls
+/paper3_admm_dmpc*.fdb_latexmk
+/paper3_admm_dmpc_pandoc.tex
+/references*.bib
+/mdpi.csl
+/Type of the Paper.docx
+/mathematics-template.dot
+
+# --- Docx build pipeline (manuscript tooling) ---
+/_preprocess.py
+/_assemble.py
+/_body*
+/_meta_frontmatter.txt
+
+# --- Scratch / debug artifacts ---
+/_*.txt
+/_*.xml
+/_*.jpg
+/_*.png
+/_dump_template.py
+/_smoke/
+/x.png
+/full_run_v2.log
+/latexmk_final.log
+/unpacked_paper/
+
+# --- Legacy (pre-v2) --- local provenance only ---
+/LEGACY_SHA256.txt
+/tools_v2/
+/tests/test_legacy_integrity.py
+/closed_loop_*.py
+/closed_loop_*.npy
+/figures/
+/validate_theory.py
+/artifacts_v2/
+/artifacts_v2_fixed_pilot/
+/artifacts_v2_full/
+/artifacts_v2_reverify/
+/artifacts_v3_extra_run*.log
+/artifacts_v3_extra_run_fine.py
+
+# --- Internal working notes (not for publication) ---
+/ABSTRACT_EN.md
+/ABSTRACT_ZH.md
+/CONFIG.md
+/LITERATURE_REVIEW.md
+/OUTLINE.md
+/RESULTS.md
+/REVIEW_DEEP.md
+/REVIEW_DEEP_V2.md
+/REVIEW_REPORT.md
+/Paper3_ADMM_DMPC_*.docx
+/cover_letter_nonlinear_SI.md
+
+# --- Atomic-write temporaries ---
+*.tmp
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db

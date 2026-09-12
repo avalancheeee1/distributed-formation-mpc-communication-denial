@@ -1,0 +1,632 @@
+[
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": 2.7795891577761084e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 2.7795891577761084e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 4.307540658979771
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 34.874509702112945
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 52.32848472282261
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 62.04940828415855
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 67.61552875111616
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 72.1570173684046
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 72.80891139237627
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": -1.964867845082522e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 1.077889502610943
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 24.93254572101187
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 37.54174300777855
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 45.22377016880924
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 49.80803777071381
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 53.47133141044367
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 54.01174607414021
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 1.3591298291903902e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 5.261811639918473
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 10.899697165107181
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 13.90213629841479
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 15.636140174781797
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 16.886724891785097
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 17.13859114482491
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": -5.861743566804309e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 5.174329796178791
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 31.202708857588863
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 55.90146167604366
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 64.3825617108415
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 66.96731310848176
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 69.42526082695166
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 70.69184818360564
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 70.69184818360567
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": -3.757645994995055e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 2.5692896877594285
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 25.599456916172393
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 47.01739201321206
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 54.42838741803029
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 56.87888001905051
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 58.88877785268151
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 60.099840352389386
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 60.099840352389386
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 1.3036002602382146e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 6.093741156073472
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 14.983323097701762
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 18.237441680492914
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 19.331185126124193
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 20.000635810375677
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 20.432830716356687
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 20.432830716356687
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": 20.432830716364318
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": 3.9130999382356606e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 3.311291687217846
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 12.136044212526954
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 31.293685294486725
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 44.915027857250244
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 56.324717352062876
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 62.350297991352825
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 67.58185469490599
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 68.62758523305271
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": -1.9261197334714415e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": 1.7536720110410797
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 12.378808922554025
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 25.365605551823528
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 37.41450814180637
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 43.174615579642996
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 49.252077352127486
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 53.48744634752866
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 54.310453162672346
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 1.0,
+    "diverged": null,
+    "final_gap": -4.927629760423253e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 1.1,
+    "diverged": null,
+    "final_gap": -4.927629760423253e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 1.2,
+    "diverged": null,
+    "final_gap": 1.0571829068849992
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 1.4,
+    "diverged": null,
+    "final_gap": 6.674295188747957
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 1.6,
+    "diverged": null,
+    "final_gap": 9.59926165703635
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 1.8,
+    "diverged": null,
+    "final_gap": 11.78714293812771
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 2.0,
+    "diverged": null,
+    "final_gap": 13.442533684599434
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 2.4,
+    "diverged": null,
+    "final_gap": 14.728184995247252
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 2.8,
+    "diverged": null,
+    "final_gap": 14.990932534849586
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 3.0,
+    "diverged": null,
+    "final_gap": Infinity
+  }
+]

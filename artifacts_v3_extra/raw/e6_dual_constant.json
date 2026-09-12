@@ -1,0 +1,380 @@
+[
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 2.640609699887303e-15
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": 5.559178315552217e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": 5.559178315552217e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": 2.7795891577761084e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": 2.7795891577761084e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 0,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 2.7508149831155305e-15
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": -3.929735690165044e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": -1.964867845082522e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": -1.964867845082522e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 1,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 3.9414765046521314e-15
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": 2.7182596583807804e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": 2.7182596583807804e-16
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "chain",
+    "seed": 2,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 1.875757941377379e-15
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": -5.861743566804309e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": -5.861743566804309e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": -5.861743566804309e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "ring",
+    "seed": 0,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 2.2545875969970328e-15
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": -1.8788229974975275e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": -5.636468992492582e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": -3.757645994995055e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": -3.757645994995055e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 1,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 3.780440754690822e-15
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": 1.3036002602382146e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": 2.607200520476429e-16
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "ring",
+    "seed": 2,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 2.6087332921571073e-15
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": 2.608733292157107e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": 2.608733292157107e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": 3.9130999382356606e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": 3.9130999382356606e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 0,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 2.1187317068185856e-15
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": 0.0
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": -1.9261197334714415e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 1,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 0.01,
+    "diverged": false,
+    "final_gap": 3.4493408322962767e-15
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 0.03,
+    "diverged": false,
+    "final_gap": -3.6957223203174395e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 0.1,
+    "diverged": false,
+    "final_gap": -3.6957223203174395e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 0.3,
+    "diverged": false,
+    "final_gap": -4.927629760423253e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 1.0,
+    "diverged": false,
+    "final_gap": -4.927629760423253e-16
+  },
+  {
+    "topology": "connected_random",
+    "seed": 2,
+    "alpha": 3.0,
+    "diverged": true,
+    "final_gap": Infinity
+  }
+]

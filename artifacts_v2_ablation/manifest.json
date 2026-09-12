@@ -1,0 +1,64 @@
+{
+  "profile": "full+ablation",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "direct_dependency_versions": {
+    "numpy": "2.2.3",
+    "scipy": "1.16.1",
+    "osqp": "1.1.1",
+    "matplotlib": "3.10.8",
+    "pandas": "3.0.3"
+  },
+  "source_sha256": "9cf26bf5242771e436accc332fe96479bb9700daae62de261e77851e1840a7fd",
+  "source_files": [
+    "strict_admm_dmpc\\__init__.py",
+    "strict_admm_dmpc\\admm.py",
+    "strict_admm_dmpc\\centralized_qp.py",
+    "strict_admm_dmpc\\closed_loop.py",
+    "strict_admm_dmpc\\communication.py",
+    "strict_admm_dmpc\\experiments.py",
+    "strict_admm_dmpc\\local_qp.py",
+    "strict_admm_dmpc\\metrics.py",
+    "strict_admm_dmpc\\model.py",
+    "strict_admm_dmpc\\plotting.py",
+    "strict_admm_dmpc\\reporting.py",
+    "experiments_v2.py",
+    "run_e5_ablation.py",
+    "export_ablation_table.py",
+    "requirements.txt",
+    "requirements-lock.txt"
+  ],
+  "raw_sha256": {
+    "raw\\results.json": "02f6845bb0921d712bdb6aff15a017ee7c2dae1c979907dc0489422c86a536f9",
+    "raw\\ablation.json": "3c014eef0918ab26f009e4c1fcf4081f87b23228eff046c3def7cb0f8efad395"
+  },
+  "artifacts_sha256": {
+    "raw\\results.json": "02f6845bb0921d712bdb6aff15a017ee7c2dae1c979907dc0489422c86a536f9",
+    "raw\\ablation.json": "3c014eef0918ab26f009e4c1fcf4081f87b23228eff046c3def7cb0f8efad395",
+    "tables\\ablation_full.tex": "973de18b3950fe2350b91134245180a870923cf4d7428bcc397480837dd063c7",
+    "tables\\e1_convergence.pdf": "7bbe11bc22306869498067c1c0b22b9b3da5b608412c49faa8b1455eedfdf484",
+    "tables\\e1_convergence.png": "4c39799138f0cdb32fb768f09fbd26f062baee44b8c1c66359a6221e4ff8790b",
+    "tables\\e2_budget.pdf": "5498e4ec16eff0eff0af077ca14017a66618293f323ba1d15678823e73fd84de",
+    "tables\\e2_budget.png": "f829d2c5cfea61b9c61cd115f5cb6c492cace1c5fd435d32c1f4ce51b61eb887",
+    "tables\\e3_denial.pdf": "c8925560000a3c00a5d356fcc869ebf728527143ab417f11d535c720b37874b2",
+    "tables\\e3_denial.png": "0e848a178509b704c172efdcfc0a486e5144b5aa74e45c68e0467761b5ef0a8f",
+    "tables\\e4_acceleration.pdf": "6aeea74b9f3d17626f3836a964962d34b8f7dd0573a43b2c3c76632ce503bc9e",
+    "tables\\e4_acceleration.png": "7d4223a416c223257d5d87a08580db737080dff9f52f8d4c92e39d60f7c6b30d",
+    "tables\\results_values.tex": "7275135221c7756297d2dea2b607d44ed157d537fa5854ae0ba4c2e904a68fd4",
+    "tables\\summary.json": "0e7ac4b7bda0581d32f1e9e854a611afdeaeea17653d38343a6e6c49f68a1492",
+    "tables\\summary.md": "6a1db9727d6d2c415965fafac0d5d9e9d57508334a2de12b4b369c40d6750523"
+  },
+  "git_hash": null
+}
