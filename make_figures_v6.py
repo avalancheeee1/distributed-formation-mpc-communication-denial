@@ -1,6 +1,6 @@
 """make_figures_v6.py — journal-grade figures for MDPI Mathematics (2nd pass).
 
-Changes over v5, in response to reviewer/author feedback:
+Changes over v5, in response to editorial and author feedback:
 
 * **e3 (denial) — text occlusion fixed.**  The per-panel legends and the
   floating "saturates"/"grows" corner tags (which sat in the top-right where the
@@ -59,6 +59,20 @@ MARKER = {"ideal": "o", "local_mpc": "D", "cv_prediction": "^", "zoh": "s"}
 _MS = 5.0
 _LW = 1.3
 
+# --- typography: uniform letter sizes across figures -------------------------
+# Figures 1 and 2 (the edge/agent schematic and the denial flowchart) are
+# lettered at 6.3-8.5 pt on a 5.83 in canvas.  Every matplotlib figure here is
+# embedded 1:1 at its native figsize width on that same canvas, so pt sizes are
+# directly comparable and Figures 1/2 set the standard the other figures must
+# match.  Rather than flattening to a single size, the rest of the figures are
+# pulled onto the two tiers that Figures 1/2 themselves use -- body 7.5 pt (the
+# `_box` / `_diamond` default and the `min f_i` label) and emphasis 8.5 pt (the
+# "Agent i" / "Edge e=(i,j)" headings).  Nothing is lettered below 7.5 pt any
+# more, where the old spread reached down to 6.0 pt.
+FS_EMPHASIS = 8.5   # panel titles, axis labels
+FS_BODY = 7.5       # tick labels, legends, annotations, in-plot numerals
+FS_SMALL = 7.5      # floor: nothing in a figure may be smaller than this
+
 
 def _style() -> None:
     plt.rcParams.update(
@@ -67,12 +81,12 @@ def _style() -> None:
             "font.serif": ["Palatino Linotype", "STIXGeneral",
                            "Times New Roman", "DejaVu Serif"],
             "mathtext.fontset": "stix",
-            "font.size": 8,
-            "axes.labelsize": 8.5,
-            "axes.titlesize": 8.5,
-            "xtick.labelsize": 7,
-            "ytick.labelsize": 7,
-            "legend.fontsize": 7,
+            "font.size": FS_BODY,
+            "axes.labelsize": FS_EMPHASIS,
+            "axes.titlesize": FS_EMPHASIS,
+            "xtick.labelsize": FS_BODY,
+            "ytick.labelsize": FS_BODY,
+            "legend.fontsize": FS_BODY,
             "axes.linewidth": 0.7,
             "axes.edgecolor": MUTED,
             "axes.labelcolor": INK,
@@ -180,12 +194,12 @@ def plot_e1(records: list[dict], out: Path) -> None:
                 markersize=_MS, markeredgecolor="white",
                 markeredgewidth=0.8, zorder=3)
         ax.annotate(f"N = {h}", xy=(rhos[-1], means[-1]), xytext=(6, 0),
-                    textcoords="offset points", color=c, fontsize=7.5,
+                    textcoords="offset points", color=c, fontsize=FS_BODY,
                     va="center")
 
     ax.axvline(1.0, color=MUTED, linewidth=0.7, linestyle=":", zorder=2)
     ax.text(0.985, 0.02, r"operating $\rho$ = 1", transform=ax.transAxes,
-            ha="right", va="bottom", fontsize=7, color=MUTED)
+            ha="right", va="bottom", fontsize=FS_BODY, color=MUTED)
 
     ax.set_xscale("log")
     ax.set_yscale("log")
@@ -225,9 +239,9 @@ def plot_e2(records: list[dict], out: Path) -> None:
     ax_a.set_xticklabels([f"{c}" for c in caps])
     ax_a.set_xlabel("ADMM iteration cap")
     ax_a.set_ylabel("Tracking error (m)")
-    ax_a.legend(frameon=False, loc="center right", fontsize=7, handlelength=1.2)
+    ax_a.legend(frameon=False, loc="center right", fontsize=FS_BODY, handlelength=1.2)
     _strip(ax_a)
-    ax_a.set_title("(a) Tracking error", fontsize=8.5, pad=8)
+    ax_a.set_title("(a) Tracking error", fontsize=FS_EMPHASIS, pad=8)
 
     ax_b.plot(caps, cpu, color=IDEAL, linewidth=_LW, marker="o", markersize=_MS,
               markeredgecolor="white", markeredgewidth=0.8, zorder=3)
@@ -237,7 +251,7 @@ def plot_e2(records: list[dict], out: Path) -> None:
     ax_b.set_xlabel("ADMM iteration cap")
     ax_b.set_ylabel("CPU time per closed loop (s)")
     _strip(ax_b)
-    ax_b.set_title("(b) Computational cost", fontsize=8.5, pad=8)
+    ax_b.set_title("(b) Computational cost", fontsize=FS_EMPHASIS, pad=8)
 
     _save(fig, out)
 
@@ -277,7 +291,7 @@ def plot_e3(records: list[dict], out: Path) -> None:
 
     ax_a.set_yscale("log")
     ax_a.set_ylabel("Peak formation error (m)")
-    ax_a.set_title("(a) Decayed coupling — error saturates", fontsize=8.5, pad=8)
+    ax_a.set_title("(a) Decayed coupling — error saturates", fontsize=FS_EMPHASIS, pad=8)
     _style_duration_axis(ax_a, durations, xpos)
 
     # --- (b) fixed-weight ablation: growth returns ---------------------------
@@ -296,7 +310,7 @@ def plot_e3(records: list[dict], out: Path) -> None:
             _dot(ax_b, xi + off_b[k], y, e, col_b[p], marker_b[p], fill=fill_b[p])
 
     ax_b.set_yscale("log")
-    ax_b.set_title("(b) Fixed-weight ablation — error grows", fontsize=8.5, pad=8)
+    ax_b.set_title("(b) Fixed-weight ablation — error grows", fontsize=FS_EMPHASIS, pad=8)
     _style_duration_axis(ax_b, durations, xpos)
 
     # --- (c) prediction error keeps growing ----------------------------------
@@ -313,7 +327,7 @@ def plot_e3(records: list[dict], out: Path) -> None:
     ax_c.set_ylabel(r"Peak prediction error $\|\xi^{k}\|$ (m)")
     ax_c.set_xlabel("Denial duration (s)")
     ax_c.set_title(r"(c) Prediction error $\|\xi^{k}\|$ keeps growing",
-                   fontsize=8.5, pad=8)
+                   fontsize=FS_EMPHASIS, pad=8)
     _style_duration_axis(ax_c, durations, xpos)
 
     # --- one shared legend outside the axes (no per-panel occlusion) ---------
@@ -325,9 +339,12 @@ def plot_e3(records: list[dict], out: Path) -> None:
         _handle(ZOH, "s", True, "ZOH (decayed)"),
         _handle(ZOH, "s", False, "ZOH (fixed)"),
     ]
-    fig.legend(handles=handles, loc="outside lower center", ncol=6,
-               frameon=False, fontsize=7, handletextpad=0.4,
-               columnspacing=0.9, borderaxespad=0.3)
+    # Six entries on one row no longer fit once the lettering is at the
+    # Figures-1/2 body size: at 7.5 pt the sixth ("ZOH (fixed)") ran past the
+    # right edge of the 5.83 in canvas and was clipped.  Two rows of three.
+    fig.legend(handles=handles, loc="outside lower center", ncol=3,
+               frameon=False, fontsize=FS_BODY, handletextpad=0.4,
+               columnspacing=1.4, borderaxespad=0.3)
 
     _save(fig, out)
 
@@ -370,11 +387,17 @@ def plot_e4(records: list[dict], out: Path) -> None:
     ax_a.set_yscale("log")
     ax_a.set_ylabel("Peak formation error (m)")
     ax_a.set_title("(a) Peak error under an accelerating reference",
-                   fontsize=8.5, pad=8)
+                   fontsize=FS_EMPHASIS, pad=8)
     _style_duration_axis(ax_a, durations, xpos)
 
     # --- (b) growth factor 60 s / 10 s ----------------------------------------
-    groups = ["CV\n(nominal)", "CV\n(accelerating)", "ZOH\n(nominal)", "ZOH\n(accelerating)"]
+    # One line per group, not two.  As two lines the labels were already
+    # abutting at the old 7 pt; at the Figures-1/2 body size the descender of
+    # "(nominal)" collided with the cap-height of the next "CV", so the block of
+    # four groups read as six separate labels.  Same words as the caption
+    # ("the nominal and accelerating scenarios"), one line each.
+    groups = ["CV (nominal)", "CV (accelerating)",
+              "ZOH (nominal)", "ZOH (accelerating)"]
     # decayed vs fixed, per scenario, per predictor (nominal from e3, accel here)
     nominal = json.loads(SUMMARY.read_text(encoding="utf-8"))["e3"]
     accel = records  # this is e4
@@ -393,15 +416,15 @@ def plot_e4(records: list[dict], out: Path) -> None:
                   color="white", edgecolor=CV if i < 2 else ZOH,
                   linewidth=1.2, zorder=3)
         ax_b.text(g_dec, y[i] + h / 2, f" {g_dec:.1f}$\\times$", va="center",
-                  ha="left", fontsize=6.5, color=INK)
+                  ha="left", fontsize=FS_BODY, color=INK)
         ax_b.text(g_fix, y[i] - h / 2, f" {g_fix:.0f}$\\times$", va="center",
-                  ha="left", fontsize=6.5, color=INK)
+                  ha="left", fontsize=FS_BODY, color=INK)
 
     ax_b.set_xscale("log")
     ax_b.set_yticks(y)
-    ax_b.set_yticklabels(groups, fontsize=7)
+    ax_b.set_yticklabels(groups, fontsize=FS_BODY)
     ax_b.set_xlabel("Growth in peak error, 10 s to 60 s ($\\times$)")
-    ax_b.set_title("(b) Fixed weight diverges, decay stays bounded", fontsize=8.5, pad=8)
+    ax_b.set_title("(b) Fixed weight diverges, decay stays bounded", fontsize=FS_EMPHASIS, pad=8)
     ax_b.axvline(1.0, color=MUTED, linewidth=0.7, linestyle=":", zorder=2)
     ax_b.set_axisbelow(True)
     ax_b.grid(axis="x", color=GRID, linewidth=0.7, zorder=0)
@@ -414,7 +437,7 @@ def plot_e4(records: list[dict], out: Path) -> None:
     handles = [_handle(CV, "^", True, "CV (decayed)"), _handle(CV, "^", False, "CV (fixed)"),
                _handle(ZOH, "s", True, "ZOH (decayed)"), _handle(ZOH, "s", False, "ZOH (fixed)")]
     fig.legend(handles=handles, loc="outside lower center", ncol=4,
-               frameon=False, fontsize=7, handletextpad=0.4,
+               frameon=False, fontsize=FS_BODY, handletextpad=0.4,
                columnspacing=0.9, borderaxespad=0.3)
 
     _save(fig, out)
@@ -456,46 +479,69 @@ def plot_equivalence(out: Path) -> None:
         im = ax.imshow(gaps[ti], cmap=cmap, norm=norm, aspect="auto",
                        interpolation="nearest")
         ax.set_xticks(range(len(rhos)))
-        ax.set_xticklabels([f"{r:g}" for r in rhos], fontsize=6.5)
+        ax.set_xticklabels([f"{r:g}" for r in rhos], fontsize=FS_BODY)
         ax.set_yticks(range(len(horizons)))
-        ax.set_yticklabels([f"N={h}" for h in horizons], fontsize=6.5)
+        ax.set_yticklabels([f"N={h}" for h in horizons], fontsize=FS_BODY)
         ax.set_title({"chain": "Chain", "ring": "Ring",
                       "connected_random": "Connected random"}[t],
-                     fontsize=7.5, pad=4)
+                     fontsize=FS_BODY, pad=4)
         for hi in range(len(horizons)):
             for ri in range(len(rhos)):
                 v = gaps[ti, hi, ri]
                 ax.text(ri, hi, f"{v:.0e}", ha="center", va="center",
-                        fontsize=6.0,
+                        fontsize=FS_BODY,
                         color="white" if v > 3e-12 else "#1a1a1a")
         ax.tick_params(length=1.5)
     axs[0].set_ylabel("Horizon")
     axs[1].set_xlabel("ADMM penalty $\\rho$")
 
     cbar = fig.colorbar(im, ax=axs, shrink=0.85, pad=0.02)
-    cbar.ax.tick_params(labelsize=6.5, length=1.5)
-    cbar.set_label("Objective gap (m)", fontsize=7)
+    cbar.ax.tick_params(labelsize=FS_BODY, length=1.5)
+    cbar.set_label("Objective gap (m)", fontsize=FS_BODY)
 
     # --- margin panel: e0 correctness gate vs tolerance ----------------------
     og = np.array([x["objective_gap"] for x in e0])
     dg = np.array([x["decision_gap"] for x in e0])
     tol = 2e-5
-    cats = ["Decision gap\n$\\|x-x^\\star\\|$", "Objective gap\n$J(x)-J^\\star$"]
-    ax_m.scatter(og, np.full_like(og, 0), color=IDEAL, s=14, alpha=0.8,
-                 edgecolor="white", linewidth=0.4, zorder=3)
-    ax_m.scatter(dg, np.full_like(dg, 1), color=ZOH, s=14, alpha=0.8,
-                 edgecolor="white", linewidth=0.4, zorder=3)
+    # Row order matters: `og` is drawn at y=0 and `dg` at y=1, so the tick
+    # labels must list the objective gap first.  They were previously reversed,
+    # which put the blue objective-gap points on a row reading "Decision gap"
+    # (the blue and orange colours were unexplained -- and an unswapped colour
+    # key would have contradicted the axis).
+    cats = ["Objective gap\n$J(x)-J^\\star$", "Decision gap\n$\\|x-x^\\star\\|$"]
+    # Distinct marker shapes as well as distinct hues, so the key stays readable
+    # in greyscale and does not rely on colour alone.
+    ax_m.scatter(og, np.full_like(og, 0), color=IDEAL, marker="o", s=14,
+                 alpha=0.8, edgecolor="white", linewidth=0.4, zorder=3,
+                 label="Objective gap $J(x)-J^\\star$")
+    ax_m.scatter(dg, np.full_like(dg, 1), color=ZOH, marker="s", s=14,
+                 alpha=0.8, edgecolor="white", linewidth=0.4, zorder=3,
+                 label="Decision gap $\\|x-x^\\star\\|$")
     ax_m.axvline(tol, color=MUTED, linestyle="--", linewidth=0.9, zorder=2)
-    ax_m.text(tol, 1.42, "gate $2\\times10^{-5}$", ha="center", fontsize=6.5,
+    ax_m.text(tol, 1.42, "gate $2\\times10^{-5}$", ha="center", fontsize=FS_BODY,
               color=MUTED)
     ax_m.set_xscale("log")
     ax_m.set_yticks([0, 1])
-    ax_m.set_yticklabels(cats, fontsize=6.5)
+    ax_m.set_yticklabels(cats, fontsize=FS_BODY)
     ax_m.set_xlim(1e-16, 1e-3)
     ax_m.set_ylim(-0.5, 1.7)
     ax_m.set_xlabel("Gap (log scale)")
     ax_m.set_title("Correctness gate: 30 cases pass by 2–9 orders of magnitude",
-                   fontsize=7.5, pad=4)
+                   fontsize=FS_BODY, pad=4)
+    # Explicit colour key.  Placed in the empty upper-left
+    # corner: the two data rows sit at y=0 and y=1 and the gate annotation sits
+    # at x=2e-5, so nothing is occluded.
+    key_handles = [
+        Line2D([], [], color=IDEAL, marker="o", linestyle="none", markersize=4.0,
+               markeredgecolor="white", markeredgewidth=0.4,
+               label="Objective gap $J(x)-J^\\star$"),
+        Line2D([], [], color=ZOH, marker="s", linestyle="none", markersize=4.0,
+               markeredgecolor="white", markeredgewidth=0.4,
+               label="Decision gap $\\|x-x^\\star\\|$"),
+    ]
+    ax_m.legend(handles=key_handles, loc="upper left", frameon=False,
+                fontsize=FS_BODY, handletextpad=0.5, borderaxespad=0.3,
+                labelspacing=0.35)
     ax_m.grid(axis="x", color=GRID, linewidth=0.7, zorder=0)
     ax_m.set_axisbelow(True)
     ax_m.tick_params(length=2.0, colors=MUTED)

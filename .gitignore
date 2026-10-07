@@ -91,3 +91,40 @@ htmlcov/
 # --- Editor / OS ---
 .DS_Store
 Thumbs.db
+
+# --- Revision working material (private: contains manuscript copies) ---
+/_rev1/
+/_figfix_work/
+/_audit/
+/rev1_figures/
+/rev1_stochastic/
+/rev1_theory_fragment.tex
+/artifacts_v3_rev1/
+/make_rev1_*.py
+/run_rev1_*.py
+/apply_rev1_*.py
+/validate_lipschitz_analytic.py
+/tests/test_rev1_stochastic.py
+
+# --- Correspondence and reviews (private) ---
+/Response_to_Reviewers*
+/coverletter*
+/Submission_package*
+/REVIEW_DEEP_FINAL.md
+/审稿人意见/
+/论文精读_*
+/e11_age_mechanism.png
+
+# --- Manuscript copies under other names ---
+/Distributed Formation Model Predictive Control*
+/Type of the Paper.docx*
+/_backup_*.docx
+/paper3_admm_dmpc*
+/*.bak
+
+# --- Internal audit data and tooling ---
+/_audit_*.json
+/_diff_docx_pdf.py
+/_dump_docx.py
+/_extract_review*.py
+/_fix_template.py

@@ -272,9 +272,9 @@ def plot_dual_decomposition(e6, e6_const, e6_trace, out: Path) -> None:
     ax_a.set_yscale("log")
     ax_a.set_xlabel(r"step size $\alpha$")
     ax_a.set_ylabel(r"iterations to $10^{-4}$ gap")
-    ax_a.set_title("(a) step-size sensitivity", fontsize=8.5)
+    ax_a.set_title("(a) step-size sensitivity", fontsize=m.FS_EMPHASIS)
     m._strip(ax_a)
-    ax_a.legend(fontsize=6.5, frameon=False, loc="upper left")
+    ax_a.legend(fontsize=m.FS_BODY, frameon=False, loc="upper left")
 
     # --- panel (b): convergence traces -------------------------------------
     admm_trace = e6_trace["admm"]
@@ -283,24 +283,37 @@ def plot_dual_decomposition(e6, e6_const, e6_trace, out: Path) -> None:
         [r["objective_gap"] for r in admm_trace],
         color=m.IDEAL, linewidth=1.3, label="ADMM",
     )
-    for alpha, color in ((0.3, "#9EC5E0"), (1.0, m.ZOH), (10.0, "#D55E00")):
+    # alpha=1 and alpha=10 previously shared one colour *and* one line style,
+    # so they were indistinguishable.  Each curve now gets its own
+    # colour, line style and marker; the three styles are also ordered by
+    # lightness (light-dotted, mid-dashed, dark-solid), so they stay separable
+    # in greyscale and in black-and-white print.
+    dd_styles = {
+        0.3: {"color": "#9EC5E0", "linestyle": ":", "marker": "o"},
+        1.0: {"color": m.ZOH, "linestyle": "--", "marker": "s"},
+        10.0: {"color": m.INK, "linestyle": "-", "marker": "^"},
+    }
+    for alpha, spec in dd_styles.items():
         dd = e6_trace["dual_decomposition"].get(str(alpha), [])
         if dd:
             ax_b.plot(
                 [r["iteration"] for r in dd],
                 [r["objective_gap"] for r in dd],
-                color=color, linewidth=1.3, linestyle="-",
+                color=spec["color"], linewidth=1.3,
+                linestyle=spec["linestyle"], marker=spec["marker"],
+                markersize=3.2, markevery=max(1, len(dd) // 12),
+                markeredgecolor="white", markeredgewidth=0.4,
                 label=rf"dual $\alpha={alpha:g}$",
             )
     ax_b.axhline(1e-4, color=m.MUTED, linewidth=0.8, linestyle=":")
-    ax_b.text(1.0, 1.6e-4, r"$10^{-4}$", fontsize=6.5, color=m.MUTED)
+    ax_b.text(1.0, 1.6e-4, r"$10^{-4}$", fontsize=m.FS_BODY, color=m.MUTED)
     ax_b.set_xscale("log")
     ax_b.set_yscale("log")
     ax_b.set_xlabel("iteration")
     ax_b.set_ylabel("relative objective gap")
-    ax_b.set_title("(b) convergence trace", fontsize=8.5)
+    ax_b.set_title("(b) convergence trace", fontsize=m.FS_EMPHASIS)
     m._strip(ax_b)
-    ax_b.legend(fontsize=6.5, frameon=False, loc="lower left")
+    ax_b.legend(fontsize=m.FS_BODY, frameon=False, loc="lower left")
 
     fig.savefig(out.with_suffix(".pdf"))
     fig.savefig(out.with_suffix(".png"), dpi=600)
@@ -337,16 +350,16 @@ def plot_tw_sweep(e7, out: Path) -> None:
     ax_a.set_yscale("log")
     ax_a.set_xlabel("denial duration (s)")
     ax_a.set_ylabel("denial-window peak RMSE (m)")
-    ax_a.set_title("(a) formation error saturates", fontsize=8.5)
+    ax_a.set_title("(a) formation error saturates", fontsize=m.FS_EMPHASIS)
     m._strip(ax_a)
-    ax_a.legend(fontsize=6.5, frameon=False)
+    ax_a.legend(fontsize=m.FS_BODY, frameon=False)
 
     ax_b.set_yscale("log")
     ax_b.set_xlabel("denial duration (s)")
     ax_b.set_ylabel(r"prediction error peak $\|\xi^k\|$ (m)")
-    ax_b.set_title("(b) prediction error keeps growing", fontsize=8.5)
+    ax_b.set_title("(b) prediction error keeps growing", fontsize=m.FS_EMPHASIS)
     m._strip(ax_b)
-    ax_b.legend(fontsize=6.5, frameon=False)
+    ax_b.legend(fontsize=m.FS_BODY, frameon=False)
 
     fig.savefig(out.with_suffix(".pdf"))
     fig.savefig(out.with_suffix(".png"), dpi=600)
