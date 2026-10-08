@@ -99,16 +99,26 @@ Thumbs.db
 /rev1_figures/
 /rev1_stochastic/
 /rev1_theory_fragment.tex
-/artifacts_v3_rev1/
+# The revision's data directory is private except for the analytic Lipschitz
+# certificate, which is the one part that carries no stochastic-channel data
+# and is published so that the paper's Proposition 1 can be checked.
+/artifacts_v3_rev1/*
+!/artifacts_v3_rev1/tables/
+/artifacts_v3_rev1/tables/*
+!/artifacts_v3_rev1/tables/lipschitz_analytic.json
 /make_rev1_*.py
 /run_rev1_*.py
 /apply_rev1_*.py
-/validate_lipschitz_analytic.py
 /tests/test_rev1_stochastic.py
 
 # --- Correspondence and reviews (private) ---
 /Response_to_Reviewers*
+# per-reviewer split letters
+/Response_to_Reviewer[1-4].*
 /coverletter*
+# bundled revision: carries the manuscript and the figure sources
+/Revision_package*
+
 /Submission_package*
 /REVIEW_DEEP_FINAL.md
 /审稿人意见/
