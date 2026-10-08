@@ -24,6 +24,10 @@ the processed tables and figures that the paper cites.
   sweep, Lipschitz estimate).
 - `run_scaling_noise_experiments.py` — E9–E10 (swarm-size scaling and
   measurement-noise robustness).
+- `validate_lipschitz_analytic.py` — certifies, per seed, the analytic Lipschitz
+  constant that replaces the E8 finite-difference estimate 0.94: the
+  strong-convexity modulus read off the input cost, the unconditional bound, the
+  sharp value solved on the free block, and the bias of the E8 chord protocol.
 - `export_ablation_table.py`, `make_figures_v2.py` … `make_figures_v6.py`,
   `make_svg_method_figs.py` — table and figure generation.
 - `make_manifest.py` — re-pins the SHA-256 manifest of the canonical data
@@ -35,6 +39,10 @@ the processed tables and figures that the paper cites.
   (E0–E5), pinned by its `manifest.json`.
 - `artifacts_v3_extra/` — the E6–E10 records (dual decomposition, decay-time
   sweep, Lipschitz, scaling, noise).
+- `artifacts_v3_rev1/tables/lipschitz_analytic.json` — the certified analytic
+  Lipschitz constant (the 90 per-seed records behind its summary). The rest of
+  `artifacts_v3_rev1/` covers the stochastic-denial experiments and is not part
+  of this release.
 
 ## Quick start
 

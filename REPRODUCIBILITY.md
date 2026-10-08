@@ -30,6 +30,18 @@ Every committed file is pinned by `artifacts_v2_ablation/manifest.json`:
 sweep, Lipschitz estimate, swarm-size scaling, and measurement noise) under
 `raw/` and their tables and figures under `tables/`.
 
+`artifacts_v3_rev1/tables/lipschitz_analytic.json` is the one published part of
+the revision's data directory; the remaining files under `artifacts_v3_rev1/`
+belong to the stochastic-denial experiments and are not part of this release. It
+carries the certification of the analytic Lipschitz constant: the
+strong-convexity modulus `mu = 0.15` read off the input cost rather than
+measured, the unconditional bound, the sharp value solved on the free block, and
+the bias of the E8 chord protocol that produced the 0.94 in
+`artifacts_v3_extra/`. Its `records` list holds the 90 per-seed rows
+(chain/ring/connected_random × 30 seeds, horizon 10) that the summary is taken
+over, and each row records whether the modulus claim, the bound, and the
+sharp-value agreement held for that seed.
+
 ## Reproduction path
 
 ```powershell
@@ -41,8 +53,13 @@ python -m venv .venv-v2
 & .\.venv-v2\Scripts\python.exe make_manifest.py
 & .\.venv-v2\Scripts\python.exe run_extra_experiments.py
 & .\.venv-v2\Scripts\python.exe run_scaling_noise_experiments.py
+& .\.venv-v2\Scripts\python.exe validate_lipschitz_analytic.py
 & .\.venv-v2\Scripts\python.exe -m pytest tests -q
 ```
+
+`validate_lipschitz_analytic.py` writes its output to
+`artifacts_v3_rev1/tables/lipschitz_analytic.json` and prints the summary to
+stdout; it needs no data beyond the committed source.
 
 `make_manifest.py` is read-only over the data directory: it hashes the frozen
 raw records and processed artifacts (and the current source) and writes only
